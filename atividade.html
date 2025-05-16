@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Post Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Post Manager</h1>
+
+    <!-- Create Post -->
+    <div class="form-section">
+      <h2>Create Post</h2>
+      <input type="number" id="createUserId" placeholder="User ID" min="1">
+      <input type="text" id="createTitle" placeholder="Title">
+      <textarea id="createBody" placeholder="Body"></textarea>
+      <button onclick="createPost()">Create Post</button>
+      <div id="createError" class="error"></div>
+    </div>
+
+    
+    <div class="form-section">
+      <h2>Read Posts</h2>
+      <button onclick="readPosts()">Load All Posts</button>
+      <input type="number" id="filterUserId" placeholder="Filter by User ID" min="1">
+      <button onclick="filterPosts()">Filter Posts</button>
+    </div>
+
+    
+    <div class="form-section">
+      <h2>Update Post</h2>
+      <input type="number" id="updateId" placeholder="Post ID" min="1">
+      <input type="number" id="updateUserId" placeholder="User ID" min="1">
+      <input type="text" id="updateTitle" placeholder="Title">
+      <textarea id="updateBody" placeholder="Body"></textarea>
+      <button onclick="updatePost()">Update Post</button>
+      <div id="updateError" class="error"></div>
+    </div>
+
+    
+    <div class="form-section">
+      <h2>Delete Post</h2>
+      <input type="number" id="deleteId" placeholder="Post ID" min="1">
+      <button onclick="deletePost()">Delete Post</button>
+      <div id="deleteError" class="error"></div>
+    </div>
+
+    
+    <div id="resp"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
